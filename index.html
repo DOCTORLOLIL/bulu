@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BULU</title>
+<style>
+:root{--bg:#F5EFE4;--ink:#14201C;--mut:#5B6B64;--card:#fff;--line:#E3DACA;--acc:#FF8A00;--grn:#075B4B}
+@media (prefers-color-scheme:dark){:root{--bg:#10171A;--ink:#EEF2EF;--mut:#9AAAA3;--card:#182226;--line:#26343A}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Heebo,"Segoe UI",Arial,sans-serif;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.logo{font-weight:800;letter-spacing:.14em;font-size:20px}
+.logo i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--acc);margin-inline-start:6px}
+.lang{border:1px solid var(--line);background:transparent;color:var(--ink);padding:6px 14px;border-radius:99px;font:inherit;font-size:14px}
+.hero{padding:32px 0 24px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start}
+.side{display:flex;flex-direction:column;gap:16px}
+.hero>div:first-child{padding-top:40px}
+.hero img{width:100%;aspect-ratio:1/1.05;object-fit:cover;border-radius:28px;display:block}
+.hero h1{font-size:clamp(34px,6vw,60px);line-height:1.1;margin:0 0 16px;font-weight:800}
+.hero p{font-size:19px;color:var(--mut);max-width:620px;margin:0}
+h2{font-size:24px;margin:48px 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.top{display:flex;align-items:center;justify-content:space-between}
+.ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:20px}
+.tag{font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:var(--mut)}
+.tag.live{background:#E3F0EA;color:var(--grn);border-color:#BBD9CC}
+.card h3{margin:6px 0 0;font-size:20px}
+.card p{margin:0;color:var(--mut);font-size:15px;flex:1}
+.go{font-weight:700;color:var(--grn);text-decoration:none;margin-top:6px}
+.dis .go{color:var(--mut)}
+.about{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.ph{width:120px;height:120px;border-radius:50%;background:repeating-linear-gradient(45deg,#E3DACA,#E3DACA 8px,#EFE7D8 8px,#EFE7D8 16px);display:grid;place-items:center;color:var(--mut);font-size:12px;text-align:center}
+.todo{background:#FFF3DF;border:1px dashed var(--acc);border-radius:8px;padding:2px 8px;color:#8A5200;font-size:14px}
+.contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.contact a{border:1px solid var(--line);border-radius:99px;padding:7px 16px;color:var(--ink);text-decoration:none;font-size:15px}
+footer{margin:56px 0 28px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;gap:24px}.hero img{aspect-ratio:1/0.85}.hero>div:first-child{padding-top:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="logo">BULU<i></i></div><button class="lang">EN</button></header>
+<section class="hero">
+<div><h1>מחפשים בעיות!<br>ואז מוצאים להם פתרונות...</h1>
+<p>BULU היא חברה קטנה שיוצרת כלים ואפליקציות. כאן אפשר למצוא את כל הפרויקטים שלנו במקום אחד.</p></div>
+<div class="side"><img src="portrait.jpg" alt="אבישי בר ישי">
+<div class="about"><h2 style="margin:0 0 8px;font-size:22px">מי אני</h2>
+<b style="font-size:18px">אבישי בר ישי</b>
+<p style="margin:6px 0 0;color:var(--mut);font-size:15px">אב לחמישה וסטנדאפיסט לשעבר. מתנדב בידידים, חובש, איש שיווק, גיימר ויוטיובר. נהנה משעות פרודוקטיביות מול המחשב, וגם משעות של סתם משחק חסר משמעות.</p>
+<div class="contact"><a href="mailto:ceo@bulu.ltd">ceo@bulu.ltd</a></div></div></div>
+</section>
+
+<h2>הפרויקטים</h2>
+<div class="grid">
+<div class="card"><div class="top"><div class="ic" style="background:#075B4B">V</div><span class="tag live">בבדיקות</span></div>
+<h3>VanSpot</h3><p>מפה קהילתית של ספוטים ללינת שטח בוואן ובקרוואן בישראל. מתעדכנת על ידי הקהילה.</p>
+<a class="go" href="#">vanspot.bulu.ltd ←</a></div>
+
+<div class="card"><div class="top"><div class="ic" style="background:#FF8A00">T</div><span class="tag live">פעיל</span></div>
+<h3>Thumbnail Studio</h3><p>יוצרים תמונות ממוזערות ליוטיוב, אינסטגרם וטיקטוק, בחינם ובלי הרשמה.</p>
+<a class="go" href="#">thumbnail.bulu.lol ←</a></div>
+
+<div class="card dis"><div class="top"><div class="ic" style="background:#5B6B64">ח</div><span class="tag">בפיתוח</span></div>
+<h3>חפשוני</h3><p>חפשוני מחליפה את המפות המודפסות והקבוצות בוואטסאפ במערכת אחת לתיאום חיפושי נעדרים, לכל הארגונים המוסמכים. היא מחלקת את השטח, משבצת צוותים ומודדת כיסוי אמיתי לפי GPS. כך החיפוש מהיר יותר ושום אזור לא נשכח.</p>
+<a class="go" href="#">בקרוב</a></div>
+</div>
+
+<footer><span>© 2026 BULU L.T.D.</span><span><a href="#" style="color:inherit">מדיניות פרטיות</a></span></footer>
+</div>
+</body></html>
