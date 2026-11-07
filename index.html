@@ -37,6 +37,9 @@ h2{font-size:24px;margin:48px 0 18px}
 .todo{background:#FFF3DF;border:1px dashed var(--acc);border-radius:8px;padding:2px 8px;color:#8A5200;font-size:14px}
 .contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
 .contact a{border:1px solid var(--line);border-radius:99px;padding:7px 16px;color:var(--ink);text-decoration:none;font-size:15px}
+.soonwrap{position:relative;display:inline-block}
+.bubble{position:absolute;bottom:calc(100% + 8px);inset-inline-start:0;background:var(--ink);color:#fff;font-size:14px;padding:8px 12px;border-radius:12px;white-space:nowrap;opacity:0;transform:translateY(4px);pointer-events:none;transition:.18s}
+.bubble.on{opacity:1;transform:none}
 footer{margin:56px 0 28px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 @media(max-width:760px){.hero{grid-template-columns:1fr;gap:24px}.hero img{aspect-ratio:1/0.85}.hero>div:first-child{padding-top:0}}
 </style>
@@ -58,17 +61,22 @@ footer{margin:56px 0 28px;padding-top:20px;border-top:1px solid var(--line);colo
 <div class="grid">
 <div class="card"><div class="top"><div class="ic" style="background:#075B4B">V</div><span class="tag live">בבדיקות</span></div>
 <h3>VanSpot</h3><p>מפה קהילתית של ספוטים ללינת שטח בוואן ובקרוואן בישראל. מתעדכנת על ידי הקהילה.</p>
-<a class="go" href="#">vanspot.bulu.ltd ←</a></div>
+<a class="go" href="https://vanspot.bulu.ltd">vanspot.bulu.ltd ←</a></div>
 
 <div class="card"><div class="top"><div class="ic" style="background:#FF8A00">T</div><span class="tag live">פעיל</span></div>
 <h3>Thumbnail Studio</h3><p>יוצרים תמונות ממוזערות ליוטיוב, אינסטגרם וטיקטוק, בחינם ובלי הרשמה.</p>
-<a class="go" href="#">thumbnail.bulu.lol ←</a></div>
+<a class="go" href="https://thumbnail.bulu.lol">thumbnail.bulu.lol ←</a></div>
 
 <div class="card dis"><div class="top"><div class="ic" style="background:#5B6B64">ח</div><span class="tag">בפיתוח</span></div>
 <h3>חפשוני</h3><p>חפשוני מחליפה את המפות המודפסות והקבוצות בוואטסאפ במערכת אחת לתיאום חיפושי נעדרים, לכל הארגונים המוסמכים. היא מחלקת את השטח, משבצת צוותים ומודדת כיסוי אמיתי לפי GPS. כך החיפוש מהיר יותר ושום אזור לא נשכח.</p>
-<a class="go" href="#">בקרוב</a></div>
+<span class="soonwrap"><a class="go" href="#" id="soon">בקרוב</a><span class="bubble" id="bubble" role="status">לא עכשיו, בקרוב. לא מובן לך?</span></span></div>
 </div>
 
 <footer><span>© 2026 BULU L.T.D.</span><span><a href="#" style="color:inherit">מדיניות פרטיות</a></span></footer>
 </div>
+<script>
+(function(){var a=document.getElementById('soon'),b=document.getElementById('bubble'),t;
+a.addEventListener('click',function(e){e.preventDefault();b.classList.add('on');clearTimeout(t);t=setTimeout(function(){b.classList.remove('on')},2600)});
+document.addEventListener('click',function(e){if(e.target!==a)b.classList.remove('on')});})();
+</script>
 </body></html>
