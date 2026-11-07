@@ -25,6 +25,7 @@ h2{font-size:24px;margin:48px 0 18px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:10px}
 .top{display:flex;align-items:center;justify-content:space-between}
+.ic img{width:100%;height:100%;border-radius:13px;display:block}
 .ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:20px}
 .tag{font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:var(--mut)}
 .tag.live{background:#E3F0EA;color:var(--grn);border-color:#BBD9CC}
@@ -46,37 +47,49 @@ footer{margin:56px 0 28px;padding-top:20px;border-top:1px solid var(--line);colo
 </head>
 <body>
 <div class="wrap">
-<header><div class="logo">BULU<i></i></div><button class="lang">EN</button></header>
+<header><div class="logo">BULU<i></i></div><button class="lang" id="lang" type="button">EN</button></header>
 <section class="hero">
-<div><h1>מחפשים בעיות!<br>ואז מוצאים להם פתרונות...</h1>
-<p>BULU היא חברה קטנה שיוצרת כלים ואפליקציות. כאן אפשר למצוא את כל הפרויקטים שלנו במקום אחד.</p></div>
-<div class="side"><img src="portrait.jpg" alt="אבישי בר ישי">
-<div class="about"><h2 style="margin:0 0 8px;font-size:22px">מי אני</h2>
-<b style="font-size:18px">אבישי בר ישי</b>
-<p style="margin:6px 0 0;color:var(--mut);font-size:15px">אב לחמישה וסטנדאפיסט לשעבר. מתנדב בידידים, חובש, איש שיווק, גיימר ויוטיובר. נהנה משעות פרודוקטיביות מול המחשב, וגם משעות של סתם משחק חסר משמעות.</p>
+<div><h1 data-he="מחפשים בעיות!<br>ואז מוצאים להם פתרונות..." data-en="Looking for problems!<br>Then finding solutions..."></h1>
+<p data-he="BULU היא חברה קטנה שיוצרת כלים ואפליקציות. כאן אפשר למצוא את כל הפרויקטים שלנו במקום אחד." data-en="BULU is a small company that builds tools and apps. All our projects, in one place."></p></div>
+<div class="side"><img src="portrait.jpg" alt="Avishai Bar Yishai">
+<div class="about"><h2 style="margin:0 0 8px;font-size:22px" data-he="מי אני" data-en="About me"></h2>
+<b style="font-size:18px" data-he="אבישי בר ישי" data-en="Avishai Bar Yishai"></b>
+<p style="margin:6px 0 0;color:var(--mut);font-size:15px" data-he="אב לחמישה וסטנדאפיסט לשעבר. מתנדב בידידים, חובש, איש שיווק, גיימר ויוטיובר. נהנה משעות פרודוקטיביות מול המחשב, וגם משעות של סתם משחק חסר משמעות." data-en="Father of five and former stand-up comedian. Volunteer at Yedidim, medic, marketer, gamer and YouTuber. Loves productive hours at the computer, as well as hours of pointless gaming."></p>
 <div class="contact"><a href="mailto:ceo@bulu.ltd">ceo@bulu.ltd</a></div></div></div>
 </section>
 
-<h2>הפרויקטים</h2>
+<h2 data-he="הפרויקטים" data-en="Projects"></h2>
 <div class="grid">
-<div class="card"><div class="top"><div class="ic" style="background:#075B4B">V</div><span class="tag live">בבדיקות</span></div>
-<h3>VanSpot</h3><p>מפה קהילתית של ספוטים ללינת שטח בוואן ובקרוואן בישראל. מתעדכנת על ידי הקהילה.</p>
-<a class="go" href="https://vanspot.bulu.ltd">vanspot.bulu.ltd ←</a></div>
+<div class="card"><div class="top"><div class="ic"><img src="icon-vanspot.png" alt="VanSpot"></div><span class="tag live" data-he="בבדיקות" data-en="In testing"></span></div>
+<h3>VanSpot</h3><p data-he="מפה קהילתית של ספוטים ללינת שטח בוואן ובקרוואן בישראל. מתעדכנת על ידי הקהילה." data-en="A community map of overnight spots for vans and caravans in Israel, kept up to date by the community."></p>
+<a class="go" href="https://vanspot.bulu.ltd" dir="ltr">vanspot.bulu.ltd →</a></div>
 
-<div class="card"><div class="top"><div class="ic" style="background:#FF8A00">T</div><span class="tag live">פעיל</span></div>
-<h3>Thumbnail Studio</h3><p>יוצרים תמונות ממוזערות ליוטיוב, אינסטגרם וטיקטוק, בחינם ובלי הרשמה.</p>
-<a class="go" href="https://thumbnail.bulu.lol">thumbnail.bulu.lol ←</a></div>
+<div class="card"><div class="top"><div class="ic" style="background:#FF8A00">T</div><span class="tag live" data-he="פעיל" data-en="Live"></span></div>
+<h3>Thumbnail Studio</h3><p data-he="יוצרים תמונות ממוזערות ליוטיוב, אינסטגרם וטיקטוק, בחינם ובלי הרשמה." data-en="Create thumbnails for YouTube, Instagram and TikTok. Free, no sign-up."></p>
+<a class="go" href="https://thumbnail.bulu.lol" dir="ltr">thumbnail.bulu.lol →</a></div>
 
-<div class="card dis"><div class="top"><div class="ic" style="background:#5B6B64">ח</div><span class="tag">בפיתוח</span></div>
-<h3>חפשוני</h3><p>חפשוני מחליפה את המפות המודפסות והקבוצות בוואטסאפ במערכת אחת לתיאום חיפושי נעדרים, לכל הארגונים המוסמכים. היא מחלקת את השטח, משבצת צוותים ומודדת כיסוי אמיתי לפי GPS. כך החיפוש מהיר יותר ושום אזור לא נשכח.</p>
-<span class="soonwrap"><a class="go" href="#" id="soon">בקרוב</a><span class="bubble" id="bubble" role="status">לא עכשיו, בקרוב. לא מובן לך?</span></span></div>
+<div class="card dis"><div class="top"><div class="ic" style="background:#5B6B64" data-he="ח" data-en="C"></div><span class="tag" data-he="בפיתוח" data-en="In development"></span></div>
+<h3 data-he="חפשוני" data-en="Chapsuni"></h3><p data-he="חפשוני מחליפה את המפות המודפסות והקבוצות בוואטסאפ במערכת אחת לתיאום חיפושי נעדרים, לכל הארגונים המוסמכים. היא מחלקת את השטח, משבצת צוותים ומודדת כיסוי אמיתי לפי GPS. כך החיפוש מהיר יותר ושום אזור לא נשכח." data-en="Chapsuni replaces printed maps and WhatsApp groups with one system for coordinating searches for missing people, for all authorized organizations. It divides the area, assigns teams and measures real coverage by GPS, so the search is faster and no area is forgotten."></p>
+<span class="soonwrap"><a class="go" href="#" id="soon" data-he="בקרוב" data-en="Soon"></a><span class="bubble" id="bubble" role="status" data-he="לא עכשיו, בקרוב. לא מובן לך?" data-en="Not now, soon. Don't get it?"></span></span></div>
 </div>
 
-<footer><span>© 2026 BULU L.T.D.</span><span><a href="#" style="color:inherit">מדיניות פרטיות</a></span></footer>
+<footer><span>&copy; 2026 BULU L.T.D.</span></footer>
 </div>
 <script>
-(function(){var a=document.getElementById('soon'),b=document.getElementById('bubble'),t;
+(function(){
+var L='he';
+try{var s=localStorage.getItem('bulu_lang');if(s==='he'||s==='en')L=s;else L=((navigator.language||'he').toLowerCase().indexOf('he')===0)?'he':'en';}catch(e){L=((navigator.language||'he').toLowerCase().indexOf('he')===0)?'he':'en';}
+function apply(){
+ document.documentElement.lang=L;document.documentElement.dir=(L==='he')?'rtl':'ltr';
+ document.title=L==='he'?'BULU | אפליקציות וכלים':'BULU | Apps and tools';
+ var n=document.querySelectorAll('[data-he]');for(var i=0;i<n.length;i++){n[i].innerHTML=n[i].getAttribute('data-'+L);}
+ document.getElementById('lang').textContent=(L==='he')?'EN':'עב';
+}
+document.getElementById('lang').addEventListener('click',function(){L=(L==='he')?'en':'he';try{localStorage.setItem('bulu_lang',L);}catch(e){}apply();});
+apply();
+var a=document.getElementById('soon'),b=document.getElementById('bubble'),t;
 a.addEventListener('click',function(e){e.preventDefault();b.classList.add('on');clearTimeout(t);t=setTimeout(function(){b.classList.remove('on')},2600)});
-document.addEventListener('click',function(e){if(e.target!==a)b.classList.remove('on')});})();
+document.addEventListener('click',function(e){if(e.target!==a)b.classList.remove('on')});
+})();
 </script>
 </body></html>
