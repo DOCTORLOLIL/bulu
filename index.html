@@ -17,14 +17,15 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Heebo,"Segoe UI",Arial,sans-serif;line-height:1.55}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-header{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+header{display:flex;align-items:center;justify-content:flex-end;padding:22px 0}
 .logo{font-weight:800;letter-spacing:.14em;font-size:20px}
 .logo i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--acc);margin-inline-start:6px}
 .lang{border:1px solid var(--line);background:transparent;color:var(--ink);padding:6px 14px;border-radius:99px;font:inherit;font-size:14px}
 .hero{padding:32px 0 24px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start}
 .side{display:flex;flex-direction:column;gap:16px}
-.hero>div:first-child{padding-top:40px}
-.hero img{width:100%;aspect-ratio:1/1.05;object-fit:cover;border-radius:28px;display:block}
+.hero>div:first-child{display:flex;flex-direction:column;gap:36px}
+.hero .brand{width:100%;max-width:560px;height:auto;display:block;margin-inline-start:auto}
+.hero .portrait{width:100%;aspect-ratio:1/1.05;object-fit:cover;border-radius:28px;display:block}
 .hero h1{font-size:clamp(34px,6vw,60px);line-height:1.1;margin:0 0 16px;font-weight:800}
 .hero p{font-size:19px;color:var(--mut);max-width:620px;margin:0}
 h2{font-size:24px;margin:48px 0 18px}
@@ -50,16 +51,17 @@ h2{font-size:24px;margin:48px 0 18px}
 .bubble{position:absolute;bottom:calc(100% + 8px);inset-inline-start:0;background:var(--ink);color:#fff;font-size:14px;padding:8px 12px;border-radius:12px;white-space:nowrap;opacity:0;transform:translateY(4px);pointer-events:none;transition:.18s}
 .bubble.on{opacity:1;transform:none}
 footer{margin:56px 0 28px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-@media(max-width:760px){.hero{grid-template-columns:1fr;gap:24px}.hero img{aspect-ratio:1/0.85}.hero>div:first-child{padding-top:0}}
+@media(max-width:760px){.hero{grid-template-columns:1fr;gap:24px}.hero .portrait{aspect-ratio:1/0.85}.hero .brand{max-width:340px;margin-inline:auto}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<header><div class="logo">BULU<i></i></div><button class="lang" id="lang" type="button">EN</button></header>
+<header><button class="lang" id="lang" type="button">EN</button></header>
 <section class="hero">
+<div><img class="brand" src="logo.png" alt="BULU – Think, Solve, Create." width="464" height="358">
 <div><h1 data-he="מחפשים בעיות!<br>ואז מוצאים להם פתרונות..." data-en="Looking for problems!<br>Then finding solutions..."></h1>
-<p data-he="BULU היא חברה קטנה שיוצרת כלים ואפליקציות. כאן אפשר למצוא את כל הפרויקטים שלנו במקום אחד." data-en="BULU is a small company that builds tools and apps. All our projects, in one place."></p></div>
-<div class="side"><img src="portrait.jpg" alt="Avishai Bar Yishai">
+<p data-he="BULU היא חברה קטנה שיוצרת כלים ואפליקציות. כאן אפשר למצוא את כל הפרויקטים שלנו במקום אחד." data-en="BULU is a small company that builds tools and apps. All our projects, in one place."></p></div></div>
+<div class="side"><img class="portrait" src="portrait.jpg" alt="Avishai Bar Yishai">
 <div class="about"><h2 style="margin:0 0 8px;font-size:22px" data-he="מי אני" data-en="About me"></h2>
 <b style="font-size:18px" data-he="אבישי בר ישי" data-en="Avishai Bar Yishai"></b>
 <p style="margin:6px 0 0;color:var(--mut);font-size:15px" data-he="אב לחמישה וסטנדאפיסט לשעבר. מתנדב בידידים, חובש, איש שיווק, גיימר ויוטיובר. נהנה משעות פרודוקטיביות מול המחשב, וגם משעות של סתם משחק חסר משמעות." data-en="Father of five and former stand-up comedian. Volunteer at Yedidim, medic, marketer, gamer and YouTuber. Loves productive hours at the computer, as well as hours of pointless gaming."></p>
